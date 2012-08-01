@@ -1,0 +1,78 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Responsive Swiper</title>
+    <meta name="viewport" content="width=device-width"/>
+    <style type="text/css">
+            /* reset elements */
+        body, ul, li, img {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            display: block;
+        }
+
+            /* swiper */
+        #swiper {
+            overflow: hidden;
+        }
+
+        #swiper ul {
+            width: 400%;
+            -webkit-transition: all ease-out .2s;
+            -moz-transition: all ease-out .2s;
+            -o-transition: all ease-out .2s;
+            -ms-transition: all ease-out .2s;
+            transition: all ease-out .2s;
+
+        }
+
+        #swiper ul.no-transition {
+            -webkit-transition: none;
+            -moz-transition: none;
+            -o-transition: none;
+            -ms-transition: none;
+            transition: none;
+        }
+
+        #swiper li {
+            float: left;
+            width: 25%;
+        }
+
+        #swiper-navigation {
+            position: absolute;
+            top: 0;
+        }
+
+        #swiper-navigation li {
+            background: #fff;
+            display: inline-block;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="swiper" data-curidx="1">
+    <ul>
+        <li><img src="http://farm9.staticflickr.com/8426/7537712878_8c7509053a_b.jpg" alt=""/></li>
+        <li><img src="http://farm9.staticflickr.com/8022/7537713768_c8b83c4791_b.jpg" alt=""/></li>
+        <li><img src="http://farm8.staticflickr.com/7240/7384721608_151d126395_b.jpg" alt=""/></li>
+        <li><img src="http://farm8.staticflickr.com/7241/7384722714_645dc750b6_b.jpg" alt=""/></li>
+    </ul>
+</div>
+<div id="swiper-navigation">
+    <ul>
+        <li><a href="#" data-swiper-nav-type="next">next</a></li>
+        <li><a href="#" data-swiper-nav-type="prev">prev</a></li>
+    </ul>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/modernizr.js"></script>
+<script type="text/javascript" src="js/responsiveSwiper.js"></script>
+<script type="text/javascript">
+    var responsiveSwiper = new ResponsiveSwiper(document.getElementById('swiper'), document.getElementById('swiper-navigation'));
+</script>
+</body>
+</html>
